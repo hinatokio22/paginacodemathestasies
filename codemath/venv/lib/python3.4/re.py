@@ -1,0 +1,5 @@
+XSym
+0069
+d6ac588c346822e338ac50249dbc1d23
+/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/re.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

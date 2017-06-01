@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}{% block content %}{% load staticfiles %}
+<div class="container_12 top-1" style="margin-top:-10px;">
+  <center>
+    <div class="page-header">
+        <h1>{% block title %}Matrices{% endblock %}</h1>
+    </div>
+
+
+    <iframe src="{% static 'PDF/operaciones-entre-matrices.pdf' %}" style="width:300px; height:275px;" frameborder="0"></iframe>
+    <iframe src="{% static 'PDF/producto vectorial 2.pdf' %}" style="width:300px; height:275px;" frameborder="0"></iframe>
+    <iframe src="{% static 'PDF/matriz traspuesta.pdf' %}" style="width:300px; height:275px;" frameborder="0"></iframe>
+    <br></br><br></br>
+    <iframe src="{% static 'PDF/matriz inversa.pdf' %}" style="width:300px; height:275px;" frameborder="0"></iframe>
+    <iframe src="{% static 'PDF/determinante de una matriz.pdf' %}" style="width:300px; height:275px;" frameborder="0"></iframe>
+    <iframe src="{% static 'PDF/gaussjordan.pdf' %}" style="width:300px; height:275px;" frameborder="0"></iframe>
+
+
+  </center>
+</div>
+{% endblock %}

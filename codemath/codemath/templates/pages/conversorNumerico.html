@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}{% block content %}{% load staticfiles %}
+<div class="container" style="margin-top:-10px;">
+<script type="text/javascript" src={% static 'js/limpiar.js' %} ></script>
+    <div class="page-header">
+        <h1>{% block title %}Conversor Numérico{% endblock %}</h1>
+    </div>
+    <form action="{% url 'conversorNumerico' %}" method="post">
+        {% csrf_token %} {{ form.as_p}}
+        <div class="form-group">
+            <label for="decimal">Decimal:</label>
+            <input id="decimal" name="decimal" type="number" value="{{deci}}" class="form-control" placeholder="31">
+        </div>
+        <div class="form-group">
+            <label for="binario">Binario:</label>
+            <input id="binario" name="binario" type="number" value="{{bina}}" class="form-control" placeholder="11111">
+        </div>
+        <div class="form-group">
+            <label for="octal">Octal:</label>
+            <input id="octal" name="octal" type="number" value="{{octa}}" class="form-control" placeholder="37">
+        </div>
+        <div class="form-group">
+            <label for="hexadecimal">Hexadecimal:</label>
+            <input id="hexadecimal" name="hexadecimal" type="text" value="{{hexa}}" class="form-control" placeholder="1F">
+        </div>
+        <button type="Submit" class="btn btn-primary">Convertir</button>
+        <button type="button" class="btn btn-danger" value="Borrar" style="margin-left: 35%" onclick="limpiarConver()">Limpiar</button>
+    </form>
+
+    <br></br><br></br>
+    <center>
+      <iframe src="{% static 'PDF/ConversorDeInversas.pdf' %}" style="width:300px; height:275px;" frameborder="0"></iframe>
+    </center>
+
+</div>
+
+{% endblock %}

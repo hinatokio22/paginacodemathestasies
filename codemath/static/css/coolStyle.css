@@ -1,0 +1,20 @@
+.fixed-t-padding{
+	padding: 0px 50px;
+	margin-top: -80px;
+}
+@media (max-width:992px) and (orientation: landscape) {
+	.fixed-t-padding{
+    margin-top: 0px;
+	}
+}
+
+@media (max-width:1999px) and (orientation: landscape) {
+	#codeMathInfo{
+		text-align: center;
+		padding-bottom: 50px;
+	}
+}
+
+#codeMathTeam div div{
+	text-align: center;
+}

@@ -1,0 +1,70 @@
+{% extends 'base/base.html' %}{% block content %}
+
+<div class="container" style="margin-top:-10px;">
+
+    <div class="page-header">
+        <h1>{% block title %}Matriz Transpuesta{% endblock %}</h1>
+    </div>
+    <form action="{% url 'matriztrans' %}" method="post">
+        {% csrf_token %} {{ form.as_p}}
+
+        <div class="form-group">
+
+            <div class="input-group">
+                <div class="col-sm-5">
+                    <span class="input-group-addon" id="basic-addon1">Dimensión M:</span>
+                <input id="dimensionm" name="dimensionm" type="text" value="4" class="form-control" placeholder="4">
+                </div>
+                <div class="col-sm-1" style="line-height:62px;">X</div>
+                <div class="col-sm-5">
+                    <span class="input-group-addon" id="basic-addon1">Dimensión N:</span>
+                <input id="dimensionn" name="dimensionn" type="text" value="4" class="form-control" placeholder="4">
+                </div>
+            </div>
+            <div class="input-group" style="margin:5px;">
+                <button onclick="generarMatriz(event)">Generar Matriz</button>
+            </div>
+
+            <div id="generatedMatrix">
+
+            </div>
+
+            <script>
+                function generarMatriz(e){
+
+                    e.preventDefault();
+
+                    var m = document.getElementById("dimensionm").value;
+                    var n = document.getElementById("dimensionn").value;
+                    var generatedMatrix = document.getElementById("generatedMatrix");
+                    generatedMatrix.innerHTML = "";
+                    for (var i = 0; i < m; i++) {
+                        var columna = document.createElement("div");
+                        columna.class = "input-group";
+                        columna.style.padding = "5px 2px";
+                        if(i%2 == 0){
+                            columna.style.backgroundColor = "rgba(0,0,0,0.2)";
+                        }
+                        for (var j = 0; j < n; j++) {
+                            var fila = document.createElement("input");
+                            fila.style.width = ((0.94/n)*100)+"%";
+                            fila.style.margin = "2px";
+                            fila.value = (i+1)+","+(j+1);
+                            fila.id = fila.name = "elemento"+i+","+j;
+                            columna.appendChild(fila);
+                        }
+                        generatedMatrix.appendChild(columna);
+                    }
+                }
+            </script>
+
+        </div>
+        <button type="Submit" class="btn btn-primary">Convertir</button>
+    </form>
+
+    <div class="input-group" style="margin-top:15px;">
+            <span class="input-group-addon" id="basic-addon1">Resultado:</span>
+            <input id="resultado" name="resultado" type="text" value="{{enviar}}" class="form-control" placeholder="">
+    </div>
+</div>
+{% endblock %}

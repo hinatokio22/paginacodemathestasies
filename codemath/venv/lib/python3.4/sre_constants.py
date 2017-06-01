@@ -1,0 +1,5 @@
+XSym
+0080
+6a84b8e75aa7a04a7700332adf1e8ecd
+/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/sre_constants.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

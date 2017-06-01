@@ -1,0 +1,106 @@
+{% load staticfiles %}
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                    <a class="navbar-brand" >CodeMath</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Software <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">Conversores de Bases</li>
+                                <li><a href="{% url 'conversorNumerico' %}">Conversor Numérico</a></li>
+                                <li><a href="{% url 'Ieeetd' %}">Estándar IEEE-745 32B</a></li>
+                                <li><a href="{% url 'Ieeesc' %}">Estándar IEEE-745 64B</a></li>
+
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Ecuaciones</li>
+
+                                <li><a href="{% url 'biseccion' %}">Método de Bisección</a></li>
+                                <li><a href="{% url 'reglaFalsa' %}">Método de Regla Falsa</a></li>
+                                <li><a href="{% url 'secante' %}">Método de la Secante</a></li>
+                                <li><a href="{% url 'newtonRaphson' %}">Método de Newton-Raphson</a></li>
+                                <li><a href="{% url 'raicesPolinomio' %}">Raices de un Polinomio</a></li>
+
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{% url 'evaluadorf' %}">Evaluador de funciones</a></li>
+                                <li><a href="{% url 'derivacion' %}">Derivación Numérica</a></li>
+
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Integrales</li>
+
+                                <li><a href="{% url 'rectangulos' %}">Métodos de los rectángulos</a></li>
+                                <li><a href="{% url 'trapecios' %}">Método de los trapecios</a></li>
+                                <li><a href="{% url 'simpson13' %}">Método de Simpson 1/3</a></li>
+                                <li><a href="{% url 'simpson38' %}">Método de Simpson 3/8</a></li>
+                                <li><a href="{% url 'montecarlo' %}">Método de Montecarlo</a></li>
+
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{% url 'tipomatrices' %}" >Matrices</a></li>
+
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{% static 'PDF/IntegracionPorRectangulos.pdf' %}" >Ajuste de curvas</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentos <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">Conversores de Bases</li>
+                                <li><a href="{% static 'PDF/ConversorDeInversas.pdf' %}" target="_blank">Conversor Numérico</a></li>
+                                <li><a href="{% static 'PDF/EstandarIEEE32By64B.pdf' %}" target="_blank">Estándar IEEE-745</a></li>
+                                <li><a href="{% static 'PDF/IEEEInversas.pdf' %}" target="_blank">Estándar IEEE Inversas</a></li>
+
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Ecuaciones</li>
+
+                                <li><a href="{% static 'PDF/MetodoDeBiseccion.pdf' %}" target="_blank">Método de Bisección</a></li>
+                                <li><a href="{% static 'PDF/MetodoDeLaReglaFalsa.pdf' %}" target="_blank">Método de Regla Falsa</a></li>
+                                <li><a href="{% static 'PDF/MetodoDeLaSecante.pdf' %}" target="_blank">Método de la Secante</a></li>
+                                <li><a href="{% static 'PDF/MetodoDeRaphson.pdf' %}" target="_blank">Método de Newton-Raphson</a></li>
+                                <li><a href="{% static 'PDF/RaicesDePolinomios.pdf' %}" target="_blank">Raices de un Polinomio</a></li>
+
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{% static 'PDF/DerivadaNumerica.pdf' %}" target="_blank">Derivación Numérica</a></li>
+
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Integrales</li>
+
+                                <li><a href="{% static 'PDF/IntegracionPorRectangulos.pdf' %}" target="_blank">Métodos de los rectángulos</a></li>
+                                <li><a href="{% static 'PDF/IntegracionPorTrapecios.pdf' %}" target="_blank">Método de los trapecios</a></li>
+                                <li><a href="{% static 'PDF/IntegracionPorSimpson1-3.pdf' %}" target="_blank">Método de Simpson 1/3</a></li>
+                                <li><a href="{% static 'PDF/IntegracionPorSimpson3-8.pdf' %}" target="_blank">Método de Simpson 3/8</a></li>
+                                <li><a href="{% static 'PDF/MetodoDeMontecarlo.pdf' %}" target="_blank">Método de Montecarlo</a></li>
+
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{% url 'tipomatricesdoc' %}" target="_blank">Matrices</a></li>
+
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{% static 'PDF/IntegracionPorRectangulos.pdf' %}" target="_blank">Ajuste de curvas</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.geogebra.org/apps/" target="_blank">Graficador </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UC9cnlDK_mlc99ltO-kDKVtw" target="_blank">Videos </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</div>

@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}{% block content %}
+<div class="container_12 top-1" style="margin-top:-10px;">
+  <center>
+    <div class="page-header">
+        <h1>{% block title %}Matrices{% endblock %}</h1>
+    </div>
+    <form action="{% url 'matricessuma' %}" method="post">
+        {% csrf_token %} {{ form.as_p}}
+        <button type="Submit" class="btn btn-primary">Suma de matrices</button>
+        <br></br>
+    </form>
+    <form action="{% url 'productomatrices' %}" method="post">
+        {% csrf_token %} {{ form.as_p}}
+        <button type="Submit" class="btn btn-primary">Producto entre matrices</button>
+        <br></br>
+    </form>
+    <form action="{% url 'productoescalar' %}" method="post">
+        {% csrf_token %} {{ form.as_p}}
+        <button type="Submit" class="btn btn-primary">Producto Escalar</button>
+        <br></br>
+    </form>
+    <form action="{% url 'matrizinversa' %}" method="post">
+        {% csrf_token %} {{ form.as_p}}
+        <button type="Submit" class="btn btn-primary">Matriz inversa</button>
+        <br></br>
+    </form>
+    <form action="{% url 'matrizdeter' %}" method="post">
+        {% csrf_token %} {{ form.as_p}}
+        <button type="Submit" class="btn btn-primary">Determinante de una matriz</button>
+        <br></br>
+    </form>
+    <form action="{% url 'matriztrans' %}" method="post">
+        {% csrf_token %} {{ form.as_p}}
+        <button type="Submit" class="btn btn-primary">Matriz transpuesta</button>
+        <br></br>
+    </form>
+    <form action="{% url 'gaussjordan' %}" method="post">
+        {% csrf_token %} {{ form.as_p}}
+        <button type="Submit" class="btn btn-danger">Gauss Jordan</button>
+        <br></br>
+    </form>
+
+  </center>
+</div>
+{% endblock %}

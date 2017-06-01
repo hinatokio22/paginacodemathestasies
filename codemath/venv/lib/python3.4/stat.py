@@ -1,0 +1,5 @@
+XSym
+0071
+de95d90b2c921dcbefcc53bc05001a29
+/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/stat.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

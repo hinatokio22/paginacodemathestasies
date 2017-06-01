@@ -1,0 +1,90 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">{% block extrastatic %} {% endblock %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>{% block title %}Codemath {% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/coolStyle.css' %}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'bootstrap-3.3.7-dist/css/carousel.css' %}" rel="stylesheet">
+</head>
+<!-- NAVBAR
+================================================== -->
+
+<body>
+    {% include 'base/navbar.html' %}
+
+    <!-- <Carousel></Carousel>
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <!--ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        </ol-->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="first-slide" src="{% static 'imagenes/header.jpg' %}" alt="First slide">
+                <div class="container">
+                    <div class="carousel-caption">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a-->
+        <!--a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a-->
+    </div>
+    <!-- /.carousel -->
+
+    {% block content %} {% endblock %}
+    <hr class="featurette-divider">
+    <!-- /END THE FEATURETTES -->
+    <!-- FOOTER -->
+    <footer style="padding: 0px 20px;">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 CodeMath, Universidad de San Buenaventura Cali.</p>
+    </footer>
+    <!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        //Si no hay internet carga el Jquery Local
+        window.jQuery || document.write("<script src=\"{% static 'bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js' %}\"><\/script>")
+    </script>
+    <script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+
+</body>
+
+</html>
